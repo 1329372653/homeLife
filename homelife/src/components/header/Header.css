@@ -1,0 +1,215 @@
+
+#head{
+    width: 1240px;
+    margin: 0 auto;
+}
+input::-ms-input-placeholder{
+    text-align: center;
+}
+input::-webkit-input-placeholder{
+    text-align: center;
+}
+.header_content{
+    width: 100%;
+    height: 100px;
+    background: white;
+}
+.header_logo{
+    float: left;
+    width: 170px;
+    height: 100px;
+}
+.header_logo img{
+    width: 170px;
+    height: 70px;
+}
+.header_logo_text{
+    text-align: center;
+}
+.header_search{
+    float: left;
+    width: 500px;
+    height: 100px;
+    position: relative;
+}
+.header_search input{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.header_search button{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 90px;
+    height: 40px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+.header_search button:hover{
+    color: white;
+    background: purple;
+}
+.head_middle{
+    float: left;
+    margin-left: 70px;
+    width: 250px;
+    height: 100px;
+    display: flex;
+}
+.head_middle a{
+    display: inline-block;
+    flex: 1;
+    line-height: 100px;
+    color: #323232;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.head_middle a:hover{
+    color: white;
+    background: #232442;
+}
+.header_right{
+    float: right;
+    width: 200px;
+    height: 100px;
+}
+.header_right ul{
+    margin: 0;
+    padding: 0;
+}
+.header_right ul li{
+    width: 100px;
+    height: 100px;
+    list-style: none;
+    display: inline-block;
+}
+.header_right ul li div{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 100px;
+    color: black;
+    font-size: 18px;
+}
+.header_right ul li div:hover{
+    color: red;
+    cursor: pointer;
+}
+.header_nav{
+    width: 100%;
+    height: 40px;
+    background: black;
+    display: flex;
+}
+.header_nav a{
+    display: inline-block;
+    flex: 1;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+/* .nav_list{
+    flex: 1;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+} */
+.nav_list:hover{
+    color: #EC6433;
+}
+.form_item{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+.form_item label{
+    display: inline-block;
+    width: 100px;
+    color: black;
+    font-weight: bold;
+    text-align: right;
+}
+.form_item input{
+    width: 300px;
+    height: 30px;
+}
+.form_btn{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.form_btn button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 50px;
+    color: white;
+    background: black;
+}
+.user_content{
+    float: right;
+    width: 200px;
+    height: 100px;
+    position: relative;
+}
+.user_avatar{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.user_avatar img{
+    width: 100%;
+    height: 100%;
+}
+.user_nickname{
+    float: left;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.user_Information{
+    position: absolute;
+    left: 100px;
+    top: 0;
+    width: 100px;
+    height: 140px;
+    background: black;
+    z-index: 999;
+    display: none;
+}
+.user_Information ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.user_Information ul li{
+    width: 100%;
+    height: 22px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 20px;
+}
+.user_Information ul li:hover{
+    cursor: pointer;
+    color: red;
+}
