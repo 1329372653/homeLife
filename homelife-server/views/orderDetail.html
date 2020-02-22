@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomeLife后台管理</title>
+    <link rel="stylesheet" href="../public/css/orderDetail.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <div class="app_content">
+        <div class="app_header">
+            <div class="header_logo">
+                <img src="../public/img/default-img/logo.jpeg" alt="HomeLife">
+                <p>欢迎来到HomeLife！</p>
+            </div>
+            <div class="header_text_content">
+                <div class="header_text">
+                    HomeLife后台管理系统
+                </div>
+            </div>
+            <div class="header_user">
+                <div class="user_nickname">
+                    您好！ {{admin.nickname}}
+                </div>
+                <a href="/logout">退出登录</a>
+            </div>
+        </div>
+        <div class="index_content">
+            <div class="index_left_content">
+                <div class="index_left_item">
+                    <a href="/index">添加商品</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/addExhibition">添加展示数据</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/addDecoration">添加装修案例数据</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/addBrand">添加品牌数据</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/addInformation">添加前沿资讯</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/getOrderForm">查看订单信息</a>
+                </div>
+            </div>
+            <div class="index_right_content">
+                <div class="index_right_title">
+                    订单详情
+                </div>
+                {{if orderDetail}}
+                <div class="order_detail_content">
+                    <div class="detail_item">
+                        <label for="">订单ID：</label>
+                        {{orderDetail._id}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">品牌：</label>
+                        {{orderDetail.brand}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">类别：</label>
+                        {{orderDetail.category}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">货号：</label>
+                        {{orderDetail.goodsNumber}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">客户id：</label>
+                        {{orderDetail.user_id}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">客户昵称：</label>
+                        {{orderDetail.nickname}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">客户真实姓名：</label>
+                        {{orderDetail.realname}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">客户手机号：</label>
+                        {{orderDetail.mobileNum}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">客户地址：</label>
+                        {{orderDetail.address}}
+                    </div>
+                    <div class="detail_item">
+                        <label for="">下单时间：</label>
+                        {{orderDetail.created_time}}
+                    </div>
+                    <div class="delete_btn">
+                        <a href="/deleteOrder/{{orderDetail._id.toString()}}">删除（已处理）</a>
+                    </div>
+                </div>
+                {{else}}
+                <div class="empty_content">
+                    错误！
+                </div>
+                {{/if}}
+
+            </div>
+        </div>
+        <div class='footer_content'>
+            <div class="footer_label1">为大众创造更加美好的日常生活、提供种类繁多、美观实用、老百姓买得起的家居用品</div>
+            <div class="footer_label2">Copyright © 2019-2020 <a
+                    href="http://wpa.qq.com/msgrd?v=3&uin=1329372653&site=qq&menu=yes">HomeLife生活家居有限公司</a>. All Rights
+                Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input::-ms-input-placeholder{
+    text-align: center;
+}
+input::-webkit-input-placeholder{
+    text-align: center;
+}
+.app_content{
+    width: 100%;
+    height: 900px;
+    background-image: url(../img/default-img/background_img.jpeg);
+    background-size: cover;
+    position: relative;
+}
+.login_content{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(../img/default-img/login_bg.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.login_title{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+#logi_form{
+    width: 100%;
+}
+.error_message{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: red;
+}
+.form_group{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+}
+.form_group label{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+.form_group input{
+    width: 350px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.submit_button_content{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    margin-top: 50px;
+}
+.submit_button_content button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 50px;
+    background: yellow;
+    border: 1px solid black;
+    border-radius: 10px;
+}

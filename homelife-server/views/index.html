@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomeLife后台管理</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <div class="app_content">
+        <div class="app_header">
+            <div class="header_logo">
+                <img src="../public/img/default-img/logo.jpeg" alt="HomeLife">
+                <p>欢迎来到HomeLife！</p>
+            </div>
+            <div class="header_text_content">
+                <div class="header_text">
+                    HomeLife后台管理系统
+                </div>
+            </div>
+            <div class="header_user">
+                <div class="user_nickname">
+                    您好！ {{admin.nickname}}
+                </div>
+                <a href="/logout">退出登录</a>
+            </div>
+        </div>
+        <div class="index_content">
+            <div class="index_left_content">
+                <div class="index_left_item">
+                    <a href="/index">添加商品</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/addExhibition">添加展示数据</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/addDecoration">添加装修案例数据</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/addBrand">添加品牌数据</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/addInformation">添加前沿资讯</a>
+                </div>
+                <div class="index_left_item">
+                    <a href="/getOrderForm">查看订单信息</a>
+                </div>
+            </div>
+            <div class="index_right_content">
+                <div class="index_right_title">
+                    添加商品
+                </div>
+                <form action="/addgoods" method="POST" enctype="multipart/form-data">
+                    <div class="index_right_form_item">
+                        <label>品牌：</label>
+                        <input type="text" id="brand" name="brand">
+                    </div>
+                    <div class="index_right_form_item">
+                        <label>类别：</label>
+                        <select id="category" name="category">
+                            <option value="床">床</option>
+                            <option value="衣柜">衣柜</option>
+                            <option value="沙发">沙发</option>
+                            <option value="餐桌">餐桌</option>
+                            <option value="书桌">书桌</option>
+                            <option value="椅子">椅子</option>
+                            <option value="灯具">灯具</option>
+                            <option value="纺织品">纺织品</option>
+                            <option value="镜子">镜子</option>
+                            <option value="床垫">床垫</option>
+                        </select>
+                    </div>
+                    <div class="index_right_form_item">
+                        <label>价格：</label>
+                        <input type="text" id="price" name="price">
+                    </div>
+                    <div class="index_right_form_item">
+                        <label>描述：</label>
+                        <input type="text" id="describe" name="describe">
+                    </div>
+                    <div class="index_right_form_item">
+                        <label>货号：</label>
+                        <input type="number" id="goodsNumber" name="goodsNumber">
+                    </div>
+                    <div class="index_right_form_item">
+                        <label>库存：</label>
+                        <input type="number" id="stock" name="stock">
+                    </div>
+                    <div class="index_right_form_item">
+                        <label>标签：</label>
+                        <select id="label" name="label">
+                            <option value="好货">好货</option>
+                            <option value="产品优选">产品优选</option>
+                            <option value="普通产品">普通产品</option>
+                        </select>
+                    </div>
+                    <div class="index_right_form_item">
+                        <label>图片：</label>
+                        <input type="file" id="pictures" name="pictures" multiple="multiple">
+                    </div>
+                    <button type="submit">提交</button>
+                </form>
+            </div>
+        </div>
+        <div class='footer_content'>
+            <div class="footer_label1">为大众创造更加美好的日常生活、提供种类繁多、美观实用、老百姓买得起的家居用品</div>
+            <div class="footer_label2">Copyright © 2019-2020 <a
+                    href="http://wpa.qq.com/msgrd?v=3&uin=1329372653&site=qq&menu=yes">HomeLife生活家居有限公司</a>. All Rights
+                Reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

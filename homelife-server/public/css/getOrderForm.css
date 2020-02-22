@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.app_content{
+    width: 1240px;
+    margin: 0 auto;
+}
+.app_header{
+    width: 100%;
+    height: 100px;
+    background: white;
+}
+.index_content{
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+}
+.footer_content{
+    width: 100%;
+    height: 100px;
+    background: black;
+    margin-top: 20px;
+}
+.footer_label1{
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+.footer_label2{
+    width: 100%;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding-top: 10px;
+}
+.header_logo{
+    float: left;
+    width: 170px;
+    height: 100px;
+}
+.header_logo img{
+    width: 170px;
+    height: 80px;
+}
+.header_logo p{
+    text-align: center;
+    font-size: 14px;
+}
+.header_text_content{
+    float: left;
+    width: 800px;
+    height: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.header_text{
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+}
+.header_user{
+    float: left;
+    width: 170px;
+    height: 100px;
+}
+.user_nickname{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    overflow: hidden;
+}
+.header_user a{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
+.index_left_content{
+    float: left;
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.index_right_content{
+    float: right;
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.index_left_item{
+    width: 350px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: black;
+    margin: 10px auto;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+.index_right_title{
+    width: 100%;
+    height: 50px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+.index_right_form_item{
+    width: 100%;
+    height: 50px;
+}
+.index_right_form_item label{
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: right;
+    line-height: 50px;
+}
+.index_right_form_item input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+}
+button{
+    width: 100px;
+    height: 50px;
+    background: black;
+    color: white;
+    margin-left: 40%;
+    margin-top: 50px;
+}
+button:hover{
+    cursor: pointer;
+    color: black;
+    background: rgb(43, 226, 125);
+}
+.order_item_content{
+    height: 550px;
+    overflow: scroll;
+    width: 100%;
+}
+.order_item_content ul{
+    list-style: none;
+}
+.order_item{
+    width: 100%;
+    height: 60px;
+}
+.order_id{
+    width: 500px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 100px;
+}
+.purchaser_name{
+    width: 500px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 100px;
+}
+.orderDetail_btn{
+    padding-left: 400px;
+}
+.empty_content{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
