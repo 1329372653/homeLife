@@ -1,68 +1,96 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HomeLife家居生活网站
 
-## Available Scripts
+## 1.说明：
 
-In the project directory, you can run:
+​		使用react框架搭建的一个家居生活网站，麻雀虽小，五脏俱全，适合react的入门学习。
 
-### `yarn start`
+​		如果对您有帮助请点击右上角的“star”支持一下！谢谢！ ^_^，如果项目存在哪些问题，请联系我进行更正哦！
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 2.项目运行：
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
+#克隆整个项目到本地：
+		git clone https://github.com/1329372653/homeLife.git
+#安装MongoDB数据库：
+		安装步骤不一一介绍，不懂的自行查阅，谢谢！
+#导入MongoDB数据（论坛的一些用于展示的数据）：
+		打开MongoDB文件夹，里面有个文件homelife.js，将此文件的数据导入到MongoDB数据库即可。
+#开启MongoDB服务：
+		Mac系统在终端输入：sudo mongod命令，输入电脑密码即可开启服务。（Windows系统不再介绍）
+#进入后台homelife-server文件夹:
+		cd homelife-server
+#安装依赖：
+		npm install
+#开启本地服务器localhost:8899
+		node server.js
+#进入前台homelife文件夹：
+		cd homelife
+#安装依赖：
+		npm install
+#开启本地服务localhost:3000
+		npm run start  或者 使用yarn命令：yarn start（推荐）
+#发布环境：
+		npm run build  或者 使用yarn命令：yarn build（推荐）
 
-### `yarn test`
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3.效果演示：
 
-### `yarn build`
+## [项目线上展示](http://godfy.cn:6789)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 4.项目功能介绍
 
-### `yarn eject`
+本项目主要实现了以下功能：
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+#用户的注册登录以及退出登录
+#用户个人信息查询
+#用户个人信息修改
+#用户密码修改
+#家居产品的分类展示
+#区域展示、套件展示、室内装饰展示、精选案例展示
+#好货研究所
+#品牌推荐
+#装修案例的展示
+#产品优选
+#前沿家居资讯
+#商品的搜索
+#提交订单
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 5.项目上线准备
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+本项目上线需要修改以下数据：
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1.修改homelife目录下的src/pages/下的每个页面代码中的图片的src路径
 
-## Learn More
+```
+比如：<img className="Brand_img" src={'http://localhost:8899' + this.state.BrandData.image} alt={this.state.BrandData.brand}></img>
+修改为：<img className="Brand_img" src={'http://您的服务器公网地址:8899' + this.state.BrandData.image} alt={this.state.BrandData.brand}></img>
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2.修改setupProxy.js
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+将下面代码中的target目标服务器地址修改为：您的服务器地址
+const proxy = require("http-proxy-middleware");
+ 
+module.exports = function(app) {
+  app.use(
+    proxy("/api", {
+      target: "http://localhost:8899/",
+      changeOrigin: true
+    })
+  );
+};
+```
 
-### Code Splitting
+3.npm run build进行项目打包，生成build文件夹
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## 6.关注我的博客
 
-### Analyzing the Bundle Size
+https://1329372653.github.io
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+关注我的博客获取更多！
